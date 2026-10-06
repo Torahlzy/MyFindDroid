@@ -1,10 +1,7 @@
-plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.parcelize)
-}
+plugins { alias(libs.plugins.android.library) }
 
 android {
-    namespace = "dev.jdtech.jellyfin.player.core"
+    namespace = "dev.jdtech.jellyfin.logging"
     compileSdk = Versions.COMPILE_SDK
     buildToolsVersion = Versions.BUILD_TOOLS
 
@@ -21,7 +18,4 @@ android {
     }
 }
 
-dependencies {
-    implementation(projects.logging)
-    implementation(libs.timber)
-}
+dependencies { api(libs.timber) }
